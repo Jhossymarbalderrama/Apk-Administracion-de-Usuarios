@@ -1,0 +1,121 @@
+<div style="width: 100%;height: 70%;">
+  <ion-grid style="height: 100%;width: 100%; flex-flow: column;" >
+    <div style="width: 100%;" align="center">
+      <ion-avatar class="ion-margin-start" style="width: 150px;height: 150px;align-items: center;overflow: auto;">           
+        <div *ngIf="!fotoSacada">
+          <img src="../../assets/img/avatar.svg" height="150px" width="150px"/>
+        </div>
+        <div *ngIf="fotoSacada">
+          <img src="{{this.photoService.pathFoto}}" height="150px" width="150px"/>
+        </div>
+      </ion-avatar>
+    </div>
+    <ion-row style="flex-grow: 1;width: 100%;height: 10%;" align="center">
+      <ion-row style="width: 100%;">
+        <ion-col align="left" style="width: 50%;">
+          <label style="font-size: 18px;">Datos del Usuario:</label>
+        </ion-col>
+        <ion-col align="right" style="width: 50%;">
+          <ion-button color="success" (click)="onScannerDNI()" style="font-weight: bold;">
+            Escanear DNI
+          </ion-button>
+        </ion-col>
+      </ion-row>        
+    </ion-row>  
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Apellidos</ion-label>
+            <ion-input placeholder="Ingrese Apellidos"   
+                       id="apellidos"                 
+                       type="text" [(ngModel)]="apellidos"                     
+                       minlength="2" maxlength="30" size="30"
+                       required>
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Nombres</ion-label>
+            <ion-input placeholder="Ingrese Nombres" 
+                       id="nombres"
+                       type="text" [(ngModel)]="nombres" 
+                       minlength="2" maxlength="30" size="30"
+                       required>            
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">DNI</ion-label>
+            <ion-input placeholder="Ingrese DNI" 
+                       id="dni"
+                       [(ngModel)]="dni"                     
+                       type="number">
+  
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Correo</ion-label>
+            <ion-input placeholder="ejempló@gmail.com"
+                      [(ngModel)]="correo"
+                      type="email" minlength="12" maxlength="30" size="30">
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col>
+        <ion-item>
+          <ion-label position="fixed">Clave</ion-label>
+            <ion-input placeholder="Contraseña159"
+                       [(ngModel)]="clave"
+                       type="password" minlength="12" maxlength="30" size="30">            
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col>            
+        <ion-item>
+          <ion-label position="stacked">Reingresé la Clave</ion-label>
+            <ion-input placeholder="Reingrese la Clave"
+                       [(ngModel)]="reingresoClave"
+                       type="password" minlength="12" maxlength="30" size="30">
+              
+            </ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row style="flex-grow: 1;">
+      <ion-col> 
+        <ion-button expand="full" (click)="onSubirFoto()" color="warning" style="height: 40px;font-size: 24;font-weight: bold;" >Subir Foto</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="full" (click)="onAgregarUsuario()" color="primary" style="height: 55px;font-size: 26px;font-weight: bold;" >Agregar Usuario</ion-button>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+</div>
+
+<ion-backdrop *ngIf="load"></ion-backdrop>
+<div  class="spinner">
+  <div *ngIf="load" class="loadingio-spinner-double-ring-ndsdn9pzfwr"><div class="ldio-7yi4e77x1ct">
+    <div></div>
+    <div></div>
+    <div><div></div></div>
+    <div><div></div></div>
+    </div></div>
+</div>
+
+

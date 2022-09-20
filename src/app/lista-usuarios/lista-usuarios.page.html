@@ -1,0 +1,27 @@
+<ion-list>
+  <ion-item *ngFor="let item of this.listaUsuarios; let i = index" data-index="i">
+    <ion-thumbnail slot="start">
+      <div *ngIf="item.pathFoto == ''">
+        <img src="../../assets/img/avatar.svg" />
+      </div>
+      <div *ngIf="item.pathFoto != ''">
+        <img src="{{item.pathFoto}}" />
+      </div>
+    </ion-thumbnail>
+    <ion-label>
+      <h2>Correo: {{item.correo}}</h2>
+      <h3>DNI: {{item.dni}}</h3>
+      <p>Nombre: {{item.apellidos}} {{item.nombres}}</p>
+    </ion-label>
+  </ion-item>
+</ion-list>
+
+<ion-backdrop *ngIf="load"></ion-backdrop>
+<div  class="spinner">
+  <div *ngIf="load" class="loadingio-spinner-double-ring-ndsdn9pzfwr"><div class="ldio-7yi4e77x1ct">
+    <div></div>
+    <div></div>
+    <div><div></div></div>
+    <div><div></div></div>
+    </div></div>
+</div><S></S>

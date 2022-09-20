@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar style="width: 100%;">
+    <ion-title style="font-weight: bold;font-size: 24px;">{{titulo}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <app-alta-usuarios *ngIf="administrador"></app-alta-usuarios>
+  <app-lista-usuarios *ngIf="!administrador"></app-lista-usuarios>
+
+  <ion-fab horizontal="end" vertical="top" slot="fixed" style="position: fixed;">
+    <ion-fab-button color="primary">
+      <ion-icon md="caret-down" ios="chevron-down-circle-outline" style="font-size: 36px;"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button color="danger"  (click)="onRedirect('desloguear')" style="height: 40px; width: 40px;">
+        <ion-icon name="exit-outline" style="font-size: 30px;color: black;"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button color="success" (click)="onRedirect('altaUsuarios')" *ngIf="menu && alta">
+        <ion-icon name="person-add-outline" style="font-size: 30px;color: black;"></ion-icon>
+      </ion-fab-button>   
+      <ion-fab-button color="primary" (click)="onRedirect('listaUsuarios')" *ngIf="menu && lista">        
+        <ion-icon name="list-outline" style="font-size: 30px;color: black;"></ion-icon>
+      </ion-fab-button>       
+    </ion-fab-list>
+  </ion-fab>
+
+  <div  class="spinner">
+    <div *ngIf="!load" class="loadingio-spinner-double-ring-ndsdn9pzfwr"><div class="ldio-7yi4e77x1ct">
+      <div></div>
+      <div></div>
+      <div><div></div></div>
+      <div><div></div></div>
+      </div></div>
+  </div>
+</ion-content>
+

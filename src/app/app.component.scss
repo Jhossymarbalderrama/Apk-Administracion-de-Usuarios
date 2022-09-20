@@ -1,0 +1,179 @@
+#divSuperpuesto{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+    width: 100%;
+    background: linear-gradient(#120c6e, #1ca7ec);
+    background-attachment: fixed;
+	  background-size: 100% 100%;
+}
+
+#divEdificio{ 
+    width: 100%;
+    background-image: url("../assets/img/CompuSola.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+	  background-size: 100% 60%;
+    background-position: center;
+}
+
+#divSplashh{ 
+    margin-top: 22%;
+    float: right;   
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.body{
+    background: linear-gradient(#120c6e, #1ca7ec);
+    background-repeat: no-repeat;
+	  background-size: 100% 100%;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+#icono-splash{    
+    // position: center;
+    // width: 100%;
+    // top: 50%;
+    // left: 50%;
+    // align-items: center;
+    // position: center;  
+    // height: 80%;
+    // width: 80%;
+
+    position: fixed;    
+    top: 25%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    z-index: 101;
+
+    -webkit-animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3 both;
+	        animation: scale-in-center 2s cubic-bezier(0.250, 0.460, 0.450, 0.940) 3 both;
+}
+
+
+ @-webkit-keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  @keyframes scale-in-center {
+    0% {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+.tracking-in-contract-bck-top {
+  text-align: center;
+  font-size: 24px;
+  font-family: Cambria;
+  font-weight: bold;
+  width: 100%;
+  color:black;
+  margin-top: 15px;
+
+  -webkit-animation: tracking-in-contract-bck-top 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+          animation: tracking-in-contract-bck-top 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-top {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(-300px);
+            transform: translateZ(400px) translateY(-300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.tracking-in-contract-bck-bottom {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-size: 18px;
+  font-family: Cambria;
+  font-weight: bold;
+  width: 100%;
+  color:black;
+  margin-bottom: 15px;
+
+	-webkit-animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+	        animation: tracking-in-contract-bck-bottom 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+ @-webkit-keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract-bck-bottom {
+  0% {
+    letter-spacing: 1em;
+    -webkit-transform: translateZ(400px) translateY(300px);
+            transform: translateZ(400px) translateY(300px);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    -webkit-transform: translateZ(0) translateY(0);
+            transform: translateZ(0) translateY(0);
+    opacity: 1;
+  }
+}
